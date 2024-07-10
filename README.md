@@ -7,7 +7,8 @@ Este proyecto es un sistema web desarrollado en PHP para almacenar, gestionar y 
 - **Gestión de Canciones:** Los usuarios pueden agregar nuevas canciones a la base de datos, incluyendo detalles como título, artista, álbum y género.
                             Las canciones pueden ser editadas o eliminadas por los usuarios que las agregaron.
 - **Base de Datos:** El sistema utiliza MySQL para almacenar la información de los usuarios y las canciones.
-##Tecnologías Utilizadas
+
+## Tecnologías Utilizadas
 Backend:
 - **PHP:**Lenguaje de programación para la lógica del servidor y la interacción con la base de datos.
 - **MySQL:** Sistema de gestión de bases de datos relacional.
