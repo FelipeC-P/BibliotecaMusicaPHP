@@ -10,7 +10,7 @@ Este proyecto es un sistema web desarrollado en PHP para almacenar, gestionar y 
 
 ## Tecnologías Utilizadas
 Backend:
-- **PHP:**Lenguaje de programación para la lógica del servidor y la interacción con la base de datos.
+- **PHP:** Lenguaje de programación para la lógica del servidor y la interacción con la base de datos.
 - **MySQL:** Sistema de gestión de bases de datos relacional.
 Frontend:
 - **HTML/CSS:** Para la estructura y el diseño del sitio web.
