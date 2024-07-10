@@ -1,0 +1,203 @@
+@import url('https://pro.fontawesome.com/releases/v6.0.0-beta1/css/all.css');
+
+* {
+    box-sizing: border-box;
+}
+
+/* Estilos Generales */
+body {
+    padding: 0;
+    margin: 0;
+    background-size: cover;
+    font-family: Helvetica;
+    background: url("https://i.imgur.com/YvUPGUK.jpg") center/cover;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 80vh;
+}
+
+button.neumorphic {
+    container-type: inline-size;
+    aspect-ratio: 1/1;
+    border: 0.5rem solid transparent;
+    border-radius: 1rem;
+    color: white;
+    background: none;
+
+    display: grid;
+    place-content: center;
+    gap: 1rem;
+
+    --shadow:
+        -.5rem -.5rem 1rem hsl(0 0% 100% / .75),
+        .5rem .5rem 1rem hsl(0 0% 50% / .5);
+    box-shadow: var(--shadow);
+    outline: none;
+    transition: all 0.1s;
+
+    &:hover,
+    &:focus-visible {
+        color: purple;
+        scale: 1.1
+    }
+
+    &:active,
+    &.active {
+        box-shadow:
+            var(--shadow),
+            inset .5rem .5rem 1rem hsl(0 0% 50% / .5),
+            inset -.5rem -.5rem 1rem hsl(0 0% 100% / .75);
+        color: purple;
+
+        >i {
+            font-size: 28cqi
+        }
+
+        ;
+
+        >span {
+            font-size: 13cqi
+        }
+
+        ;
+    }
+
+    >i {
+        font-size: 31cqi;
+    }
+
+    >span {
+        font-family: system-ui, sans-serif;
+        font-size: 16cqi;
+    }
+}
+
+h1 {
+    text-align: center;
+    color: white;
+    font-family: system-ui, sans-serif;
+    font-size: 3rem;
+}
+
+.buttons {
+    display: grid;
+    width: min(60rem, 100%);
+    margin-inline: auto;
+    grid-template-columns: repeat(auto-fit, minmax(min(8rem, 100%), 1fr));
+    gap: 2rem;
+}
+
+/* Estilos del Encabezado */
+#app {
+    max-width: 500px;
+    margin: 2em auto;
+    background-color: #fff;
+    padding: 1em;
+    border-radius: 10px;
+}
+
+.alert {
+    background-color: #EFEEF1;
+    border: 1px solid #E91C24;
+    border-radius: 5px;
+    border-left-width: 5px;
+    padding: 1em;
+}
+
+.nav--login {
+    padding: 0.3em;
+}
+
+.nav--login a {
+    color: #A291C4;
+    text-decoration: none;
+    margin-right: 1em;
+}
+
+.form {
+    padding: 0.5em;
+}
+
+.form label {
+    display: block;
+    margin-top: 0.5em;
+}
+
+.form input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.btn {
+    margin: 1em 0;
+    background-color: #F4F4F4;
+    color: #B0ADB5;
+    text-align: center;
+    display: block;
+    padding: 0.5em;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.nav--login {
+    border-bottom: 2px solid #A291C4;
+    margin-bottom: 1em;
+}
+
+.nav {
+    background-color: #4B387A;
+    padding: 0.6em;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 0.5em;
+}
+
+.nav a {
+    margin: 0 1em;
+    text-decoration: none;
+}
+
+a.loggedIn {
+    flex: 0 1 240px;
+    margin-left: auto;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+}
+
+.user--avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    grid-column: 1 / 2;
+    grid-row: 1 / span 2;
+    align-self: center;
+}
+
+.user--name {
+    font-size: 18px;
+    margin: 0;
+}
+
+.user--avatar img {
+    object-fit: cover;
+    object-position: center;
+    width: 50px;
+}
+
+.nav a {
+    color: #B4C4E7;
+}
+
+.nav a:hover {
+    color: #fff;
+}
+
+.hidden {
+    display: none;
+}

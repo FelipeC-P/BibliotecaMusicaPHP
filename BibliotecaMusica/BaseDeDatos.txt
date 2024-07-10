@@ -1,0 +1,54 @@
+CREATE DATABASE musica2023;
+USE musica2023;
+
+CREATE TABLE canciones2023(
+    idCancion int, 
+    nombre varchar(100),
+    artista varchar(100),
+    album varchar(100),
+    duracion time,
+    PRIMARY KEY(idCancion)
+);
+
+CREATE TABLE usuarios (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    user VARCHAR(50),
+    password VARCHAR(100)
+);
+
+INSERT INTO usuarios (user, password) VALUES ('admin', 'admin1234');
+
+insert into canciones2023(idCancion, nombre, artista, album, duracion) values
+    (01, "Flowers", "Miley Cyrus", " ", " "),
+    (02, "Kill Bill", "SZA", " ", " "),
+    (03, "As It Was", "Harry Styles", " ", " "),
+    (04, "Seven (feat. Latto)", "Jung Kook", " ", " "),
+    (05, "Ella Baila Sola", "Eslabon Armado, Peso Pluma", " ", " "),
+    (06, "Cruel Summer", "Taylor Swift", " ", " "),
+    (07, "Creepin", "Metro Boomin, The Weeknd, 21 Savage"," ", " "),
+    (08, "Calm Down (with Selena Gomez)", "Rema, Selena Gomez"," ", " "),
+    (09, "Shakira: Bzrp Music Sessions, Vol. 53", "Bizarrap, Shakira", " ", " "),
+    (10, "Anti-Hero", "Taylor Swift"," ", " ");
+
+CREATE TABLE informacion (
+    idInfo INT AUTO_INCREMENT PRIMARY KEY,
+    genero VARCHAR(50),
+    año INT,
+    video VARCHAR(255),
+    idCancion INT,
+    FOREIGN KEY (idCancion) REFERENCES canciones2023(idCancion)
+);
+
+INSERT INTO informacion (genero, año, video, idCancion) VALUES
+("Pop", 2023, "https://www.youtube.com/watch?v=G7KNmW9a75Y", 1),
+("Pop", 2022, "https://www.youtube.com/watch?v=MSRcC626prw", 2),
+("Synth pop,", 2022, "https://www.youtube.com/watch?v=H5v3kku4y6Q", 3),
+("K-Pop", 2023, "https://www.youtube.com/watch?v=QU9c0053UAU", 4),
+("Corrido", 2023, "https://www.youtube.com/watch?v=lZiaYpD9ZrI", 5),
+("Pop", 2019, "https://www.youtube.com/watch?v=ic8j13piAhQ", 6),
+("Hip-hop/rap", 2022, "https://www.youtube.com/watch?v=61ymOWwOwuk", 7),
+("Afrobeats", 2022, "https://www.youtube.com/watch?v=WcIcVapfqXw", 8),
+("Pop", 2024, "https://www.youtube.com/watch?v=CocEMWdc7Ck", 9),
+("Pop rock", 2022, "https://www.youtube.com/watch?v=b1kbLwvqugk", 10),
+("Alternativa/independiente", 2020, "https://www.youtube.com/watch?v=ewOPQZZn4SY", 12);
+

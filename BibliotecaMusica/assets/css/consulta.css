@@ -1,0 +1,273 @@
+* {
+    box-sizing: border-box;
+}
+
+/* Estilos Generales */
+body {
+    padding: 0;
+    margin: 0;
+    background-size: cover;
+    font-family: Helvetica;
+    background: url("https://i.imgur.com/YvUPGUK.jpg") center/cover;
+}
+
+/* Titulos */
+.fs-title {
+    font-size: 2.0rem;
+    text-align: center;
+    text-transform: uppercase;
+    color: white;
+    margin-bottom: 1.5vw;
+    letter-spacing: 0.1em;
+    font-weight: bold;
+}
+
+.fs-subtitle {
+    text-align: center;
+    font-size: 1.2vw;
+    color: #2b2a2a;
+    margin-bottom: 2vw;
+}
+
+/*informacion de la cancion*/
+.carousel-caption {
+    position: absolute;
+    right: 15%;
+    bottom: 20px;
+    left: 15%;
+    z-index: 10;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: #fff;
+    text-align: center;
+    text-shadow: 0 2px 4px #1503f6;
+    background-color: #0000008a;
+    border-radius: 10px;
+}
+
+.d-none {
+    display: none!important;
+}
+
+@media (min-width: 768px) {
+    .d-md-block {
+        display: block!important;
+    }
+}
+
+.song-name {
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.song-artist {
+    font-size: 15px;
+}
+
+img {
+    max-width: 100%;
+    max-height: 424px;
+}
+
+/*Carrousel*/
+#carrousel {
+    margin: 10px;
+}
+@media (max-width: 768px) {
+    #carrousel {
+        margin: 70px 0px 0px 0px;
+   }
+}
+@media (max-width: 425px) {
+    #carrousel {
+        margin: 50px 0px 0px 0px;
+   }
+}
+#carrousel .title {
+    margin-bottom: 10px;
+    font-size: 30px;
+}
+#carrousel .owl-carousel img {
+    max-height: 100%;
+    max-width: 100%;
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    height: 380px;
+    object-fit: cover;
+    -moz-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+    -webkit-box-shadow: 12px 12px 10px -10px rgba(0, 0, 0, .25);
+    -moz-box-shadow: 12px 12px 10px -10px rgba(0, 0, 0, .25);
+    box-shadow: 12px 12px 10px -10px rgba(0, 0, 0, .25);
+}
+#carrousel .owl-carousel .owl-item {
+    height: 380px;
+    position: relative;
+    transform: scale(0.7);
+    -ms-transform: scale(0.7);
+    transition: all 0.2s;
+    -webkit-transform: all 0.2s;
+    z-index: 1;
+}
+@media (max-width: 768px) {
+    #carrousel .owl-carousel .owl-item {
+        height: 270px;
+   }
+}
+@media (max-width: 380px) {
+    #carrousel .owl-carousel .owl-item {
+        height: 200px;
+   }
+}
+#carrousel .owl-carousel .owl-stage-outer {
+    padding-bottom: 10px;
+}
+#carrousel .owl-item.big {
+    transform: scale(1);
+    -ms-transform: scale(1);
+    z-index: 3;
+}
+#carrousel .owl-item.medium {
+    transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    z-index: 2;
+}
+#carrousel .owl-item.medium.mdright {
+   /*border: solid 1px red;
+   */
+    position: relative;
+    left: -30px;
+}
+@media (min-width: 768px) {
+    #carrousel .owl-item.medium.mdright {
+        left: 0px;
+   }
+}
+#carrousel .owl-item.medium.mdleft {
+   /*border: solid 1px blue;
+   */
+    position: relative;
+    right: -30px;
+}
+@media (min-width: 768px) {
+    #carrousel .owl-item.medium.mdleft {
+        right: 0px;
+   }
+}
+#carrousel .owl-item.smallRight.active { /* left side last img */
+    transform: scale(0.7);
+    -ms-transform: scale(0.7);
+    position: relative;
+    left: -100px;
+}
+ #carrousel .owl-item.smallLeft.active { /* left side last img */
+    transform: scale(0.5);
+    -ms-transform: scale(0.7);
+    position: relative;
+    right: -100px;
+}
+#carrousel .owl-nav {
+    position: absolute;
+    top: 30%;
+    width: 100%;
+}
+#carrousel .owl-nav .owl-prev {
+    position: absolute;
+    left: 0px;
+    top: 10px;
+    background: transparent !important;
+    color: #000 !important;
+    font-size: 40px !important;
+}
+#carrousel .owl-nav .owl-prev:hover {
+    color: #adadad !important;
+}
+#carrousel .owl-nav .owl-next {
+    position: absolute;
+    right: 0px;
+    top: 10px;
+    background: transparent !important;
+    color: #000 !important;
+    font-size: 40px !important;
+}
+#carrousel .owl-nav .owl-next:hover {
+    color: #adadad !important;
+}
+
+/* Estilos del Encabezado */
+.nav--login {
+    padding: 0.3em;
+}
+
+.nav--login a {
+    color: #A291C4;
+    text-decoration: none;
+    margin-right: 1em;
+}
+
+.nav--login {
+    border-bottom: 2px solid #A291C4;
+    margin-bottom: 1em;
+}
+
+.nav {
+    background-color: #4B387A;
+    padding: 0.6em;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 0.5em;
+}
+
+.nav a {
+    margin: 0 1em;
+    text-decoration: none;
+}
+
+a.loggedIn {
+    flex: 0 1 240px;
+    margin-left: auto;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+}
+
+.user--avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    grid-column: 1 / 2;
+    grid-row: 1 / span 2;
+    align-self: center;
+}
+
+.user--name {
+    font-size: 18px;
+    margin: 0;
+}
+
+.user--avatar img {
+    object-fit: cover;
+    object-position: center;
+    width: 50px;
+}
+
+.nav a {
+    color: #B4C4E7;
+}
+
+.nav a:hover {
+    color: #fff;
+}
+
+.hidden {
+    display: none;
+}
